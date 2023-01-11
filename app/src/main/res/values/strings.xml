@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Andoroid_DSA</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="button">Button</string>
+    <string name="register">Register</string>
+    <string name="login">LogIn</string>
+    <string name="list_objects">List Objects</string>
+    <string name="hello">Hello</string>
+    <string name="your_profile">Your profile</string>
+    <string name="updating_title">update_title</string>
+    <string name="updating_username">updating_username</string>
+    <string name="updating_surname">updating_surname</string>
+    <string name="updating_birthday">updating_birthday</string>
+    <string name="updating_email">updating_email</string>
+    <string name="updating_password">updating_password</string>
+    <string name="updating_identifier">updating_identifier</string>
+    <string name="updating_description">updating_description</string>
+    <string name="updating_cost">updating_cost</string>
+    <string name="updating_title_gadget">updating_title_gadget</string>
+    <string name="updating_coins">updating_coins</string>
+    <string name="updating_title_user">updating_title_user</string>
+</resources>

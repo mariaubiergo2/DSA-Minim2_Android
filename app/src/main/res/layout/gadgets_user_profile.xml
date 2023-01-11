@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/main_back_dif"
+    tools:context=".activities.GadgetActivity">
+    <Button
+        android:id="@+id/returnBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="680dp"
+        android:backgroundTint="@color/cardview_shadow_end_color"
+        android:fontFamily="@font/play_regular"
+        android:onClick="ReturnToProfile"
+        android:text="←"
+        android:textColor="@color/green_vibrant"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:textStyle="bold"
+        android:textColor="@color/green_vibrant"
+        android:fontFamily="@font/play_regular"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:id="@+id/Edit_Title_Update1"
+        android:text="@string/updating_title_user"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerGadgetUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/Edit_Title_Update1">
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>

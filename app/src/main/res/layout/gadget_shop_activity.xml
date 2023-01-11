@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/main_back_dif"
+    tools:context=".activities.GadgetActivity">
+    <Button
+        android:id="@+id/returnBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="680dp"
+        android:backgroundTint="@color/cardview_shadow_end_color"
+        android:fontFamily="@font/play_regular"
+        android:onClick="goBackToDashBoardActivity"
+        android:text="←"
+        android:textColor="@color/green_vibrant"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <TextView
+        android:id="@+id/title_gadgets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GADGET SHOP"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/play_bold"
+        android:textColor="@color/green_vibrant"
+        android:textSize="25dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerGadget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/title_gadgets">
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>

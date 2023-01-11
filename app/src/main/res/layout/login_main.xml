@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LogInActivity"
+    android:background="@drawable/main_back_dif">
+
+
+    <TextView
+        android:id="@+id/textview_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/doLoginBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/doLoginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/cardview_shadow_start_color"
+        android:fontFamily="@font/play_regular"
+        android:onClick="doLogin"
+        android:text="@string/login"
+        android:textColor="@color/green_vibrant"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_second" />
+
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/play_regular"
+        android:text="You don't have an account?"
+        android:textStyle="italic"
+        android:textColor="@color/green_vibrant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doLoginBtn" />
+
+    <Button
+        android:id="@+id/SignUpBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/cardview_shadow_end_color"
+        android:fontFamily="@font/play_regular"
+        android:onClick="ClickRegister"
+        android:text="SIGN UP"
+        android:textColor="@color/green_vibrant"
+        android:textSize="17sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_second"
+        app:layout_constraintVertical_bias="0.668" />
+
+    <CheckBox
+        android:id="@+id/rememberBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/play_regular"
+        android:text="Remember me"
+        android:textColor="@color/green_vibrant"
+        app:layout_constraintStart_toStartOf="@+id/passwordTxt"
+        app:layout_constraintTop_toBottomOf="@+id/passwordTxt" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/passwordTxt"
+        android:layout_width="309dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/green_vibrant"
+        android:fontFamily="@font/play_regular"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:shadowColor="@color/green_vibrant"
+        android:textColor="@color/green_vibrant"
+        android:textColorHint="@color/green_vibrant"
+        app:layout_constraintBottom_toTopOf="@+id/doLoginBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correuText"
+        app:layout_constraintVertical_bias="0.55" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/correuText"
+        android:layout_width="309dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/green_vibrant"
+        android:fontFamily="@font/play_regular"
+        android:hint="email"
+        android:shadowColor="@color/green_vibrant"
+        android:textColor="@color/green_vibrant"
+        android:textColorHint="@color/green_vibrant"
+        app:layout_constraintEnd_toEndOf="@+id/passwordTxt"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/passwordTxt"
+        app:layout_constraintTop_toBottomOf="@+id/textview_second" />
+
+    <TextView
+        android:id="@+id/titleLogin"
+        android:layout_width="206dp"
+        android:layout_height="53dp"
+        android:fontFamily="@font/play_bold"
+        android:text="LOGIN"
+        android:textAlignment="center"
+        android:textColor="@color/green_vibrant"
+        android:textSize="43sp"
+        app:layout_constraintBottom_toTopOf="@+id/textview_second"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.559" />
+
+    <Button
+        android:id="@+id/returnBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="680dp"
+        android:backgroundTint="@color/cardview_shadow_end_color"
+        android:fontFamily="@font/play_regular"
+        android:onClick="returnFunction"
+        android:text="←"
+        android:textColor="@color/green_vibrant"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
