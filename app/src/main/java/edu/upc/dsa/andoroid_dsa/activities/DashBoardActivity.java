@@ -27,7 +27,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class DashBoardActivity extends AppCompatActivity implements View.OnClickListener {
-    public CardView yourProfile, gadgetShop, logOut;
+    public CardView yourProfile, gadgetShop, others;
     public String userId;
     public String username;
     Api APIservice;
@@ -104,8 +104,10 @@ public class DashBoardActivity extends AppCompatActivity implements View.OnClick
     public void getCardViewsReady(){
         yourProfile=(CardView) findViewById(R.id.profiles);
         gadgetShop=(CardView) findViewById(R.id.gadgetCard);
+        others=(CardView) findViewById(R.id.others);
         yourProfile.setOnClickListener(this);
         gadgetShop.setOnClickListener(this);
+        others.setOnClickListener(this);
     }
     public void saveVariables(UserInformation userInformation) {
         SharedPreferences sharedPreferences= getSharedPreferences("userInformation", Context.MODE_PRIVATE);

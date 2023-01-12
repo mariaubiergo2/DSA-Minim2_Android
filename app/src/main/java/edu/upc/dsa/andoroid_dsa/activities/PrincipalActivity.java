@@ -6,7 +6,11 @@ import static edu.upc.dsa.andoroid_dsa.activities.LogInActivity.TEXT2;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ProgressBar;
 
@@ -15,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.util.Locale;
 import java.util.Objects;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -31,6 +36,7 @@ public class PrincipalActivity extends AppCompatActivity {
 
     Api APIservice;
 
+    Intent intent;
     private String text1;
     private String text2;
 
@@ -38,23 +44,48 @@ public class PrincipalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.principal_main);
-        loadData();
+        this.loadData();
 
         TimerTask t = new TimerTask() {
             @Override
             public void run() {
                 if(!Objects.equals(text1, "") && !Objects.equals(text2, "")) {
-                    Intent intent = new Intent(PrincipalActivity.this, DashBoardActivity.class);
-                    startActivity(intent);
+                    intent = new Intent(PrincipalActivity.this, DashBoardActivity.class);
                 } else {
-                    Intent intent = new Intent(PrincipalActivity.this, LogInActivity.class);
-                    startActivity(intent);
+                    intent = new Intent(PrincipalActivity.this, LogInActivity.class);
                 }
-                finish();
             }
         };
         Timer tiempo = new Timer();
         tiempo.schedule(t,5000);
+    }
+    public void setLanguage(View view){
+        if (intent!=null) {
+            switch (view.getId()) {
+                case R.id.buttonEN:
+                    setLocale("en");
+                    startActivity(intent);
+                    break;
+                case R.id.buttonZH:
+                    setLocale("zh");
+                    startActivity(intent);
+                    break;
+            }
+        }
+    }
+
+    private void setLocale(String language) {
+        Resources resources = getResources();
+        DisplayMetrics metrics = resources.getDisplayMetrics();
+        Configuration configuration = resources.getConfiguration();
+        configuration.locale = new Locale(language);
+        resources.updateConfiguration(configuration, metrics);
+        onConfigurationChanged(configuration);
+    }
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfiguration) {
+        super.onConfigurationChanged(newConfiguration);
     }
 
     public void loadData() {
@@ -62,4 +93,7 @@ public class PrincipalActivity extends AppCompatActivity {
         text1 = sharedPreferences.getString( TEXT1,"" );
         text2 = sharedPreferences.getString( TEXT2,"" );
     }
+
+
+
 }

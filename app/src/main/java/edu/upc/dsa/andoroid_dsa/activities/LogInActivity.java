@@ -46,8 +46,6 @@ public class LogInActivity extends AppCompatActivity {
         setContentView(R.layout.login_main);
         emailTEXTE = findViewById(R.id.correuText);
         passwordTxt = findViewById(R.id.passwordTxt);
-
-        Toast.makeText(this,"Please Sign In.", Toast.LENGTH_SHORT).show();
     }
     public void saveData() {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
@@ -57,8 +55,6 @@ public class LogInActivity extends AppCompatActivity {
         editor.putString(TEXT2, passwordTxt.getText().toString());
 
         editor.apply();
-
-        Toast.makeText(this, "Data saved", Toast.LENGTH_SHORT).show();
     }
 
     public void doLogin(View view) throws IOException {
@@ -90,7 +86,6 @@ public class LogInActivity extends AppCompatActivity {
                         assert userIdR != null;
                         saveVariables(userIdR);
                         LogInActivity.this.startActivity(intentRegister);
-                        Toast.makeText(LogInActivity.this,"Correctly login", Toast.LENGTH_SHORT).show();
                         break;
 
                     case 409:

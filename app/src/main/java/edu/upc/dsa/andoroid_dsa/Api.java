@@ -43,6 +43,6 @@ public interface Api {
     @GET("shop/gadget/{idGadget}")
     Call<Gadget> getGadget(@Path("idUser") String idGadget);
 
-    @PUT("/user/update/{idUser}")
+    @PUT("shop/user/update/{idUser}")
     Call<Void> updateUser(@Body User user, @Path("idUser") String idUser);
 }
