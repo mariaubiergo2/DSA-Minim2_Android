@@ -5,6 +5,7 @@ import androidx.annotation.BinderThread;
 import java.util.List;
 
 import edu.upc.dsa.andoroid_dsa.models.Credentials;
+import edu.upc.dsa.andoroid_dsa.models.FAQ;
 import edu.upc.dsa.andoroid_dsa.models.Gadget;
 import edu.upc.dsa.andoroid_dsa.models.User;
 import edu.upc.dsa.andoroid_dsa.models.UserId;
@@ -29,11 +30,6 @@ public interface Api {
     @GET("shop/user/{idUser}")
     Call<UserInformation> getUser(@Path("idUser") String idUser); //UserInformation es el que torna despres
 
-    //Call<UserInformation> call =APIservice.getUser(this.userId);
-    //call.enqueue(new Callback<UserInformation>() {
-    //@Override
-    //public void onResponse(Call<UserInformation> call, Response<UserInformation> response)
-
     @PUT("shop/gadget/buy/{idGadget}/{idUser}")
     Call<Void> buyAGadget(@Path("idGadget") String idGadget,@Path("idUser") String idUser);
 
@@ -45,4 +41,7 @@ public interface Api {
 
     @PUT("shop/user/update/{idUser}")
     Call<Void> updateUser(@Body User user, @Path("idUser") String idUser);
+
+    @GET("shop/FAQs")
+    Call<List<FAQ>> getFAQs();
 }

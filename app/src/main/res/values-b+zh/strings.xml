@@ -14,7 +14,7 @@
     <string name="list_objects">List Objects</string>
     <string name="hello">Hello</string>
     <string name="your_profile">你</string>
-    <string name="your_profile_note">开始</string>
+    <string name="your_profile_note">Acces to your profile!</string>
     <string name="updating_title">update_title</string>
     <string name="updating_username">updating_username</string>
     <string name="updating_surname">updating_surname</string>
@@ -27,12 +27,12 @@
     <string name="updating_title_gadget">updating_title_gadget</string>
     <string name="updating_coins">updating_coins</string>
     <string name="updating_title_user">updating_title_user</string>
-    <string name="welcometext">你好，</string>
-    <string name="gadget_shop">Gadget Shop</string>
-    <string name="gadget_shop_note">买新董事</string>
+    <string name="welcometext">你好,</string>
+    <string name="gadget_shop">买新董事</string>
+    <string name="gadget_shop_note">Buy some gadgets!</string>
     <string name="start_game">开打</string>
     <string name="start_game_note">Can you save the witcher?</string>
-    <string name="other">Another activity</string>
-    <string name="other_note">Other activity!</string>
+    <string name="other">问题</string>
+    <string name="other_note">Frequent questions</string>
 
 </resources>

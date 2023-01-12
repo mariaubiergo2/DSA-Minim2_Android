@@ -48,7 +48,6 @@ public class DashBoardActivity extends AppCompatActivity implements View.OnClick
         Intent i;
         switch(view.getId()){
             case R.id.profiles:
-                Toast.makeText(this,"PICO ACCEPT", Toast.LENGTH_SHORT).show();
                 i=new Intent(this,YourProfileActivity.class);
                 startActivity(i);
                 break;
@@ -62,8 +61,7 @@ public class DashBoardActivity extends AppCompatActivity implements View.OnClick
                 startActivity(i);
                 break;
             case R.id.others:
-                Toast.makeText(this,"PICO ACCEPT", Toast.LENGTH_SHORT).show();
-                i=new Intent(this, LogInActivity.class);
+                i=new Intent(this, FAQsActivity.class);
                 startActivity(i);
                 break;
         }
@@ -81,7 +79,6 @@ public class DashBoardActivity extends AppCompatActivity implements View.OnClick
                         updateLabel(userInformation);
                         saveVariables(userInformation);
                         saveUserId(userId);
-                        Toast.makeText(DashBoardActivity.this,"Correctly received UserInformation", Toast.LENGTH_SHORT).show();
                         break;
                     case 409:
                         Toast.makeText(DashBoardActivity.this,"Could not reach UserInformation!", Toast.LENGTH_SHORT).show();
